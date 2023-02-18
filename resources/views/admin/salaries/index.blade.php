@@ -35,6 +35,9 @@
                             {{ trans('cruds.salary.fields.date') }}
                         </th>
                         <th>
+                            {{ trans('cruds.salary.fields.date_2') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -56,6 +59,9 @@
                             </td>
                             <td>
                                 {{ $salary->date ?? '' }}
+                            </td>
+                            <td>
+                                {{ $salary->date_2 ?? '' }}
                             </td>
                             <td>
                                 @can('salary_show')

@@ -47,6 +47,14 @@
                             {{ $salary->date }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.salary.fields.date_2') }}
+                        </th>
+                        <td>
+                            {{ $salary->date_2 }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

@@ -31,6 +31,10 @@ class StoreSalaryRequest extends FormRequest
                 'required',
                 'date_format:' . config('panel.date_format'),
             ],
+            'date_2' => [
+                'required',
+                'date_format:' . config('panel.date_format'),
+            ],
         ];
     }
 }

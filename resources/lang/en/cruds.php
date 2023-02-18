@@ -81,8 +81,10 @@ return [
             'updated_at_helper' => ' ',
             'deleted_at'        => 'Deleted at',
             'deleted_at_helper' => ' ',
-            'date'              => 'Date',
+            'date'              => 'From',
             'date_helper'       => ' ',
+            'date_2'            => 'Until',
+            'date_2_helper'     => ' ',
         ],
     ],
 ];
