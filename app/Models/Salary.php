@@ -17,6 +17,7 @@ class Salary extends Model
 
     protected $dates = [
         'date',
+        'date_2',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -26,6 +27,7 @@ class Salary extends Model
         'hodim_id',
         'salary',
         'date',
+        'date_2',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -44,6 +46,16 @@ class Salary extends Model
     public function setDateAttribute($value)
     {
         $this->attributes['date'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
+    }
+
+    public function getDate2Attribute($value)
+    {
+        return $value ? Carbon::parse($value)->format(config('panel.date_format')) : null;
+    }
+
+    public function setDate2Attribute($value)
+    {
+        $this->attributes['date_2'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
     }
 
     protected function serializeDate(DateTimeInterface $date)

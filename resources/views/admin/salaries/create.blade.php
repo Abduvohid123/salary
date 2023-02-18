@@ -44,6 +44,16 @@
                 <span class="help-block">{{ trans('cruds.salary.fields.date_helper') }}</span>
             </div>
             <div class="form-group">
+                <label class="required" for="date_2">{{ trans('cruds.salary.fields.date_2') }}</label>
+                <input class="form-control date {{ $errors->has('date_2') ? 'is-invalid' : '' }}" type="text" name="date_2" id="date_2" value="{{ old('date_2') }}" required>
+                @if($errors->has('date_2'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('date_2') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.salary.fields.date_2_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

@@ -12,6 +12,7 @@ class CreateSalariesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('salary');
             $table->date('date');
+            $table->date('date_2');
             $table->timestamps();
             $table->softDeletes();
         });
